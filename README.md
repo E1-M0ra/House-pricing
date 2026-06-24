@@ -17,10 +17,6 @@ Predicting real estate prices is a classic yet complex machine learning task due
 
 - **Feature Selection**: Systematic removal of redundant and low-impact features to improve model generalizability.
 
-- **Model Comparison**: Evaluates several regression techniques including:
-  - Linear Models: Lasso, Ridge, and ElasticNet.
-  - Ensemble Methods: Random Forest and Gradient Boosting Regressors.
-
 - **Production-Ready Pipeline**: Includes a streamlined version using Scikit-Learn `Pipeline` and `ColumnTransformer` for automated, reproducible preprocessing and modeling.
 
 ## Dataset
@@ -39,7 +35,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn category_encoders termc
 
 1. Ensure you have the `train.csv` dataset in the same directory as the notebook.
 
-1. Open the `Revised_BehindtheScenes.ipynb` notebook for a detailed step-by-step analysis, or `Pipelined.ipynb` for the automated pipeline version.
+1. Open the `BehindtheScenes.ipynb` notebook for a detailed step-by-step analysis, or `Pipelined.ipynb` for the automated pipeline version.
 
 1. Run the cells sequentially to see the data processing steps and model performance results.
 
@@ -65,7 +61,7 @@ A production-ready approach using Scikit-Learn's `Pipeline` and `ColumnTransform
 
 ## Results
 
-The **Gradient Boosting Regressor** typically provides the most accurate predictions, capturing non-linear relationships in the housing data that linear models might miss.
+The **Ridge Regressor** typically provides accurate predictions, capturing linear relationships in the housing data.
 
 ## Contributing
 
