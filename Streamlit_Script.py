@@ -14,7 +14,8 @@ numerical_features = df.select_dtypes(include=['int64', 'float64']).columns.toli
 
 @st.cache_resource
 def load_my_model():
-    return joblib.load("house_price_model.pkl")
+    model = joblib.load("house_price_model.pkl")
+    return model
 
 model = load_my_model()
 
