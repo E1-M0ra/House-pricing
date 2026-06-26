@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import os
 
 @st.cache_data
 def load_training_data():
@@ -14,7 +15,11 @@ numerical_features = df.select_dtypes(include=['int64', 'float64']).columns.toli
 
 @st.cache_resource
 def load_my_model():
-    return joblib.load("house_price_model.pkl")
+    current_dir = os.path.dirname(__file__)
+    model_path = os.path.join(current_dir, "my_model.pkl")
+    with open(model_path, "rb") as file:
+        model = joblib.load(file)
+    return model
 
 model = load_my_model()
 
