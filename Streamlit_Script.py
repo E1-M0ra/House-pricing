@@ -5,7 +5,7 @@ import joblib
 
 @st.cache_data
 def load_training_data():
-    return pd.read_csv(r"N:\Unlimited Resources\Computing\Data Science\Road to Portfolio\Linear_Regression\train.csv") 
+    return pd.read_csv("train.csv") 
 
 df = load_training_data()
 df.drop(columns=['3SsnPorch', 'MiscVal', 'MoSold', 'Id', 'MSSubClass', 'OverallQual', 'BsmtFinSF2', 'LowQualFinSF', 'BsmtFullBath', 'YrSold', 'GarageArea', 'TotRmsAbvGrd', 'PoolQC', 'RoofMatl', 'Condition2', 'Utilities', 'Street', 'SalePrice'], inplace=True)
