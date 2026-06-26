@@ -12,12 +12,7 @@ df.drop(columns=['3SsnPorch', 'MiscVal', 'MoSold', 'Id', 'MSSubClass', 'OverallQ
 categorical_features = df.select_dtypes(include=['object']).columns.tolist()
 numerical_features = df.select_dtypes(include=['int64', 'float64']).columns.tolist()
 
-
-@st.cache_resource
-def load_my_model():
-    return joblib.load("house_price_model.pkl")
-
-model = load_my_model()
+model = joblib.load("house_price_model.pkl")
 
 st.set_page_config(page_title="House Price Predictor", layout="centered")
 st.title("🔮 Machine Learning Prediction App")
