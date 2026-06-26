@@ -16,7 +16,7 @@ numerical_features = df.select_dtypes(include=['int64', 'float64']).columns.toli
 @st.cache_resource
 def load_my_model():
     current_dir = os.path.dirname(__file__)
-    model_path = os.path.join(current_dir, "my_model.pkl")
+    model_path = os.path.join(current_dir, "house_pricing_model.pkl")
     with open(model_path, "rb") as file:
         model = joblib.load(file)
     return model
